@@ -56,8 +56,10 @@ jobs:
         run: | 
           ls ${{ github.workspace }}
       - run: npm install 
-        working-directory: mashup
-      - id: mashup-audit 
+        working-directory: unittesting
+      - id: unittesting-audit 
         run: npm audit 
-        working-directory: mashup
+      -id: unittesting-test
+        run: npm run test
+        working-directory: unittesting
       
