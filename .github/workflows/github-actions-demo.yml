@@ -44,6 +44,11 @@ jobs:
       - id: mashup-audit 
         run: npm audit 
         working-directory: mashup
+      - run: npm i lint 
+        working-directory: mashup
+      - run: npm run lint 
+        working-directory: mashup 
+        
   unittesting: 
     runs-on: ubuntu-latest 
     steps:
